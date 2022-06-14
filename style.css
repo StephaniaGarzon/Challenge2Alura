@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'Architects Daughter', cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300&family=Roboto:wght@300&display=swap");
+}
+
+
+body {
+  background: url(fondo/fondo_claro.jpg) no-repeat center;
+  background-size: cover;
+
+}
+  
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-family: 'Architects Daughter', cursive;;  
+  font-size: 16px;
+}
+
+#logo {
+  width: 6rem;
+}
+
+header {
+  margin: 1rem 0;
+  color: #0a3871;
+}
+
+#hombre {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+}
+
+.hombre-ahorcado {
+  width: 100vw;
+  text-align: center;
+  margin-top:  0.5rem;
+  margin-bottom: 1rem;
+  height: 16.75rem;
+}
+
+.mensaje {
+  text-align: center;
+  color: #1f5d97;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  display: block;
+  visibility: hidden;
+}
+
+.adivinado {
+  text-align: center;
+  color: #1c254d;
+  font-size: 1.8rem;
+}
+
+.letra {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.adivinada {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-bottom: solid 2px #1c254d;
+  margin-left: 0.4rem;
+  line-height: 4.5rem;
+}
+
+.errado {
+  text-align:  center;
+  margin-top: 1rem;
+  color: #242d34;
+}
+
+.errada {
+  margin-left: 1rem;
+}
+
+[type="button"], [type="submit"] {
+width: 15rem;
+padding: 1rem;
+border-radius: 1rem;
+border: solid 1px #083c7c;
+color: #083c7c;
+background: inherit;
+cursor: pointer;
+}
+
+.btn-morado {
+background-color: #083c7c;
+color: #fff;
+border-color: #000;
+margin: 0.5rem;
+}
+
+.botones {
+text-align: center;
+margin-top: 2rem;
+}
+
+#iniciar-juego {
+  background-color: #083c7c;
+  color: #fff;
+  border-color: #000;
+  margin: 0.5rem;
+}
+
+#btn-guardar {
+  background-color: #083c7c;
+  color: #fff;
+  border-color: #000;
+  margin: 0.5rem;  
+}
+
+.titulo {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  color: #083c7c;
+  padding: 4rem;
+  margin-bottom: 5rem;
+}
+
+#soga {
+  margin-left: 0.7rem;
+}
+
+.contenido {
+  width: 100vw;
+  height: 80vh;
+}
+
+.titulo1 {
+  display: block;
+  text-align: center;
+  font-size: 42px;
+  color: #083c7c;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+#entrada {
+  min-height: 15vh;
+  width: 40vw;
+  margin: 2rem;
+  padding: 1rem;
+  overflow-y: auto;
+  word-break: break-all;
+  font-size: 2rem;
+  color: #083c7c;
+  text-align: center;
+  background-color: inherit;
+  border: none;
+}
+
+#advertencia{
+  color: #083c7c;
+}
+
+::placeholder {
+  color: #2d4d75f1;
+  font-size: 1.5rem;
+}
+
+#mob-entrada {
+  position: absolute;
+  top: -10000px;
+  left: -10000px;
+}
+
+hombre-ahorcado form {
+  position:  relative;
+}

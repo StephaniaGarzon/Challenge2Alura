@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<template id="nueva-palabra" type="x-template">
+<header>
+  <img src="./Imagenes/logo.png" alt="Logo-alura" class="logo" /><link
+    rel="icon"
+    href="./Imagenes/logo.png"
+  />
+</header>
+<main>
+  <label class="titulo1"
+    >Agregue una Palabra<img src="./Imagenes/sl.png" alt="" id="soga"
+  /></label>
+  <section>
+    <center>
+      <textarea
+        type="text"
+        id="entrada"
+        placeholder="Ingrese una palabra"
+      ></textarea
+      ><br /><label id="advertencia"
+        ><img src="./imagenes/vector.png" alt="" />Max. de 20 letras</label
+      >
+    </center>
+    <form class="botones" action="javascript:guardarPalabra()">
+      <button type="submit" id="btn-guardar">Guardar y empezar</button
+      ><a href="javascript:mostrar('index')"
+        ><button type="button" id="btn-cancelar">Cancelar</button></a
+      >
+    </form>
+  </section>
+</main>
+</template>
+<template id="index" type="x-template">
+<header><img id="logo" src="./imagenes/Logo.png" /></header>
+<div class="contenido">
+  <label class="titulo">El ahorcado</label>
+  <form class="botones">
+    <a href="javascript:mostrar('nuevo-juego')"
+      ><button type="button" id="iniciar-juego">Iniciar juego</button></a
+    ><a href="javascript:mostrar('nueva-palabra')"
+      ><button type="button" id="nueva-palabra">
+        Agregar nueva palabra
+      </button></a
+    >
+  </form>
+</div>
+</template>
+<template id="nuevo-juego" type="x-template">
+<header><img id="logo" src="./imagenes/Logo.png" /></header>
+<div class="ganaste">
+  <span class="mensaje">ESTO NO DEBERIAS VERLO, CURIOSILLO :P</span>
+</div>
+<div class="hombre-ahorcado">
+  <form action="javascript:ocultarTeclado()">
+    <input type="text" id="mob-entrada" name="letra" placeholder="letra"/>
+    <input type="submit" value="adivinar" hidden>
+  </form>
+  <img id="hombre" alt="hombre-ahorcado" src="./imagenes/estados/010.png" />
+</div>
+<div class="adivinado"><span class="letra adivinada"></span></div>
+<div class="errado"><span class="letra errada"></span></div>
+<form class="botones" action="javascript:void(0)">
+  <input
+    type="button"
+    class="btn-morado"
+    value="Nuevo juego"
+    onclick="nuevoJuego()"
+  /><a href="javascript:mostrar('index')"
+    ><button type="button" id="btn-cancelar">Desistir</button></a
+  >
+</form>
+</template>
+<script src="./juego.js"></script>
+<script>
+mostrar('index')
+</script>
+</body>
+</html>
